@@ -1,0 +1,23 @@
+#weather-app-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.button {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: rgb(176, 176, 176);
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.button:hover {
+    background-color: rgb(187, 186, 186);
+}
+
+.button:active {
+    transform: scale(0.95);
+}
