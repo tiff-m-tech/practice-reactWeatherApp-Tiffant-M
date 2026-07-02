@@ -7,9 +7,18 @@ export default function CityForecast({ city }) {
     // Creates a reference that starts as null until the forecast section renders.
     const forecastRef = useRef(null);
 
-    const handleFocus = () => {
+    // Originally used
+    // const handleFocus = () => {
+    //     if (forecastRef.current) {
+    //         forecastRef.current.focus();
+    //     }
+    // };
+
+    const handleScrolltoView = () => {
         if (forecastRef.current) {
-            forecastRef.current.focus();
+            forecastRef.current.scrollIntoView({
+                behavior: "smooth",
+            });
         }
     };
 
@@ -26,7 +35,7 @@ export default function CityForecast({ city }) {
         <div>
             <br />
             {/* Clicking View Details scrolls to the forecast section. */}
-            <a href="#forecast-container" className="button" onClick={handleFocus}>
+            <a href="#forecast-container" className="button" onClick={handleScrolltoView}>
                 View Details
             </a>
             <div style={{ height: "100vh" }}></div>
